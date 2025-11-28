@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = ["*"]   # later we can set your Render domain here
+ALLOWED_HOSTS = [".onrender.com", "localhost", "127.0.0.1"]  # Compatible with Render deployment
 
 
 
@@ -130,8 +130,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/meida/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'meida')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 from django.contrib.messages import constants as messages
