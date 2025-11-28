@@ -31,19 +31,28 @@ ALLOWED_HOSTS = ["*"]   # later we can set your Render domain here
 
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',  # 👈 add this line
-
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # your other apps...
+
+    # Your apps
+    'accounts',
+    'app',
+    'cart',
+    'category',
+    'farmer',
+    'orders',
+    'store',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,7 +87,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'AgroPlace.wsgi.application'
-AUTH_USER_MODEL = 'app.Account'
+AUTH_USER_MODEL = 'accounts.Account'
+
 
 
 # Database

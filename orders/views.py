@@ -5,7 +5,8 @@ from django.shortcuts import render, redirect
 from cart.models import CartItem
 from .forms import OrderForm
 from .models import Order, OrderProduct
-from app.models import Account
+from accounts.models import Account
+
 import datetime
 import json
 from django.http import JsonResponse, HttpResponseRedirect

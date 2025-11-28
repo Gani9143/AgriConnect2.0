@@ -11,7 +11,7 @@ except Exception:
 from django.urls import reverse
 from django.shortcuts import render, redirect,get_object_or_404
 # from .forms import RegistrationForm, UserForm, UserProfileForm
-from app.models import Account, UserProfile
+from accounts.models import Account, UserProfile
 # from orders.models import Order, OrderProduct
 # from cart.models import Cart, CartItem
 # from cart.views import _cart_id
@@ -33,7 +33,8 @@ from django.core.mail import EmailMessage
 from django.views.generic import ListView
 from category.models import Category
 from store.models import Product
-from app.models import Account
+from accounts.models import Account
+
 from django import forms
 def products(request):
     farmerid = Account.objects.get(email=request.user)

@@ -1,6 +1,6 @@
 from django.db import models
 from category.models import Category
-from app.models import Account
+from accounts.models import Account
 from django.urls import reverse
 from django.db.models import Avg, Count
 from django.template.defaultfilters import slugify

@@ -1,6 +1,7 @@
 from django.db import models
-from app.models import Account
+from accounts.models import Account
 from store.models import Product
+
 
 class Order(models.Model):
 

@@ -3,7 +3,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 import farmer.models
 from orders.models import Order, OrderProduct
 from .forms import RegistrationForm, UserForm, UserProfileForm
-from app.models import Account, UserProfile
+from accounts.models import Account, UserProfile
+
 # from orders.models import Order, OrderProduct
 # from cart.models import Cart, CartItem
 # from cart.views import _cart_id
@@ -20,7 +21,8 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import EmailMessage
-from accounts.models import Chatbox
+from app.models import Chatbox
+
 from django.utils import timezone
 
 def register(request):

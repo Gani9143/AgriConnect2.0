@@ -1,7 +1,8 @@
 from django.db import models
+from accounts.models import Account
 from store.models import Product
-from django.utils import timezone
-from app.models import Account
+
+
 # Create your models here.
 
 
